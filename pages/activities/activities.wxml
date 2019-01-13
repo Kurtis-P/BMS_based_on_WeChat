@@ -1,0 +1,19 @@
+<view wx:if="{{activitiesdata.length !== 0}}">
+                <view wx:for="{{activitiesdata}}" wx:key="index" class="book-item" data-id="{{item.time}}" data-title="{{item.name}}">
+                    <view class="book-img">
+                        <image mode="aspectFit" src="{{item.pic}}"></image>
+                    </view>
+                    <view class="book-info">
+                        <view class="title">
+                            <text>{{item.name}}</text>
+                        </view>
+                        <view class="author">
+                            <text>时间: {{item.time}}</text>
+                        </view>
+                        <view class="issued">
+                            <text>简介: {{item.summary}}</text>
+                        </view>
+                    </view>
+                    <view class="more-btn">></view>
+                </view>
+            </view>

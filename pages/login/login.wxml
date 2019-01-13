@@ -1,0 +1,20 @@
+<!--pages/login/login.wxml-->
+<view class='container'>
+  <view class='bg-img'>
+    <image mode='scaleToFill' src='../../images/login_bg.png'></image>
+  </view>
+  <view class='main'>
+    <view class='title'>
+      <text>沈杨书社</text>
+    </view>
+    <view class='account-input'>
+      <input focus='true' bindinput='bindAccountInput' placeholder='账号' placeholder-style='color: #fff;' />
+    </view>
+    <view class='pwd-input'>
+      <input bindinput='bindPwdInput' password placeholder='密码' placeholder-style='color: #fff;' />
+    </view>
+    <view class='login-btn'>
+      <button type='default' bindtap='bildlogin' size='mini'>登陆</button>
+    </view>
+  </view>
+</view>

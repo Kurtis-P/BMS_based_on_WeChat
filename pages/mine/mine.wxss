@@ -1,0 +1,64 @@
+/* pages/mine/mine.wxss */
+
+.header {
+    background-color: #005d35;
+    text-align: center;
+    align-items: center;
+    padding: 20rpx 0;
+    color: #fff;
+    border-bottom: 30rpx solid #e7e7e7;
+}
+
+.header .image {
+    margin: 0 auto;  
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+    width: 161rpx;
+    height: 161rpx;
+    border: 6rpx solid #fff;
+    border-radius: 50%;
+}
+
+.header .user-name {
+    margin-bottom: 20rpx;
+}
+
+.header .user-info {
+    font-size: 28rpx;
+    color: #fff;
+}
+
+.main {
+    font-size: 30rpx;
+}
+
+.main {
+    padding: 15rpx 40rpx;
+}
+
+.main .section {
+    font-weight: bolder;
+    padding-bottom: 15rpx;
+    border-bottom: 1rpx solid #e7e7e7;
+    margin-bottom: 20rpx;
+}
+
+.main .section .show-btn, .main .section .hide-btn {
+    float: right;
+    display: inline-block;
+}
+
+.main .section .show-btn {
+    transform: rotate(180deg);
+}
+
+.main .wishes .book-info {
+    display: flex;
+    align-items: center;
+}
+
+.main .wishes .book-item {
+    height: auto;
+    padding-left: 20rpx;
+}

@@ -1,0 +1,60 @@
+<view>
+    <view class="header">
+        <open-data type="userAvatarUrl" class="image"></open-data>
+        
+        <view class='user-name'>
+            <open-data type="userNickName" lang="zh_CN" ></open-data>
+        </view>
+        <view class='user-info'>
+        </view>
+    </view>
+    <view class="main">
+        <!-- 我的借阅 -->
+        <view class="section " bindtap="toggleShowBorrow">我的借阅
+            <span wx:if="{{records.length !== 0}}">
+                <span wx:if="{{showHistory}}" class="hide-btn btn">^</span>
+                <span wx:else class="show-btn btn">^</span>
+            </span>
+        </view>
+        <view class='records list' wx:if="{{showHistory}}">
+            <view wx:for="{{records}}" wx:key="index" class="book-item">
+                <view class="book-img">
+                    <image mode="aspectFit" src="{{item.pic}}"></image>
+                </view>
+                <view class="book-info">
+                    <view class="name">
+                        <text>{{item.name}}</text>
+                    </view>
+                    <view class="start">
+                        <span class='label'>借阅日期:</span>
+                        <text>{{item.time}}</text>
+                    </view>
+                    <view class="day">
+                        <span class='label'>逾期时间:</span>
+                        <text>{{item.time2}}</text>
+                    </view>
+                </view>
+                <view class="return">
+                    <button type='default' size='mini' data-detail="{{item}}" bindtap='returnBack'>续借该书</button>
+                </view>
+            </view>
+        </view>
+
+        <view class="section" bindtap="toggleShowActivities">我的活动
+            <span wx:if="{{Activities.length !== 0}}">
+                <span wx:if="{{showActivities}}" class="hide-btn btn">^</span>
+                <span wx:else class="show-btn btn">^</span>
+            </span>
+        </view>
+        <view class='Activities list' wx:if="{{showActivities}}">
+            <view wx:for="{{Activities}}" wx:key="index" class="book-item">
+                <view class="book-info">
+                    <text>{{item.title}}</text>
+                </view>
+                <view class="cancel">
+                    <button type='default' size='mini' data-detail="{{item}}" bindtap='cancelActivities'>移除</button>
+                </view>
+            </view>
+        </view>
+    </view>
+</view>
